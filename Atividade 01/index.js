@@ -14,7 +14,7 @@ function addPlayer() {
     const nameInput = document.createElement('input')
     nameInput.type = 'text'
     nameInput.name = 'namePlayer'
-    nameInput.id = 'namePlayer'
+    nameInput.className = 'namePlayer'
 
     playerName.appendChild(nameInput)
 
@@ -29,7 +29,7 @@ function addPlayer() {
     const positionInput = document.createElement('input')
     positionInput.type = 'text'
     positionInput.name = 'positionPlayer'
-    positionInput.id = 'positionPlayer'
+    positionInput.className = 'positionPlayer'
 
     positionPlayer.appendChild(positionInput)
 
@@ -44,7 +44,7 @@ function addPlayer() {
     const numberInput = document.createElement('input')
     numberInput.type = 'number'
     numberInput.name = 'shirtNumber'
-    numberInput.id = 'shirtNumber'
+    numberInput.className = 'shirtNumber'
 
     shirtNumberPlayer.appendChild(numberInput)
 
@@ -57,9 +57,9 @@ function addPlayer() {
     buttonConfirm.className = 'confirmPlayer'
     buttonConfirm.onclick = function() {
         
-        const name = document.getElementById('namePlayer').value
-        const position = document.getElementById('positionPlayer').value
-        const number = document.getElementById('shirtNumber').value
+        var name = document.querySelector('.namePlayer').value
+        var position = document.querySelector('.positionPlayer').value
+        var number = document.querySelector('.shirtNumber').value
 
         const confirPlayer = {}
         confirPlayer.nome = name
