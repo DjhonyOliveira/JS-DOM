@@ -2,7 +2,7 @@ let dev = []
 
 const buttonTechnology = document.querySelector('.technology')
 
-buttonTechnology.addEventListener('click', function(ev){
+buttonTechnology.addEventListener("click", function(ev){
     // ev.defaultPrevented()
 
     const br = document.createElement('br')
@@ -62,8 +62,33 @@ buttonTechnology.addEventListener('click', function(ev){
     divTime.appendChild(label3)
 
 
-    technologis.appendChild(br)
+    // technologis.appendChild(br)
     technologis.appendChild(divLanguage)
     technologis.appendChild(divTime)
 
+})
+
+const form = document.querySelector('#enviar')
+
+form.addEventListener("submit", function(ev){
+    ev.defaultPrevented()
+
+    var developerName = document.querySelector('#nameDeveloper').value
+
+    var languageTime = ""
+    document.querySelectorAll("input[class='language']").forEach(function(name){
+
+        let experience = ""
+        document.querySelector("input[type='radio']:checked").forEach(function(time){
+            experience += time.value
+        })
+
+        languageTime += "linguagem: " + name.value + "\n" +
+                        "Experiencia: " + experience
+            return languageTime
+    })
+
+    console.log({developerName, languageTime})
+
+    // dev.push(languageTime)
 })

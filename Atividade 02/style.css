@@ -1,0 +1,13 @@
+.experience {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.languages {
+    margin-top: 15px;
+}
+
+input#enviar {
+    margin-top: 15px;
+}
