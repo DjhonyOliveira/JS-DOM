@@ -3,7 +3,7 @@ let dev = []
 const buttonTechnology = document.querySelector('.technology')
 
 buttonTechnology.addEventListener("click", function(ev){
-    // ev.defaultPrevented()
+    ev.preventDefault()
 
     const br = document.createElement('br')
     const technologis = document.querySelector('.technologies')
@@ -70,25 +70,31 @@ buttonTechnology.addEventListener("click", function(ev){
 
 const form = document.querySelector('#enviar')
 
-form.addEventListener("submit", function(ev){
-    ev.defaultPrevented()
 
-    var developerName = document.querySelector('#nameDeveloper').value
+form.addEventListener("click", function(ev){
+    ev.preventDefault()
 
-    var languageTime = ""
-    document.querySelectorAll("input[class='language']").forEach(function(name){
+    let developerName = document.querySelector('#nameDeveloper').value
 
-        let experience = ""
-        document.querySelector("input[type='radio']:checked").forEach(function(time){
-            experience += time.value
-        })
-
-        languageTime += "linguagem: " + name.value + "\n" +
-                        "Experiencia: " + experience
-            return languageTime
+    let nameLanguage = document.querySelectorAll("input[class='language']")
+    
+    nameLanguage.forEach(function(name){
+        nameLanguage += name.value  
     })
 
-    console.log({developerName, languageTime})
+    let experience = document.querySelectorAll("input[type='radio']:checked")
+        
+    experience.forEach(function(time){
+        experience += time.value
+    })
 
-    // dev.push(languageTime)
+    let developer = {}
+    developer.name = developerName
+    developer.linguagem = nameLanguage
+    developer.esperiencia = experience
+
+
+    console.log({developer})
+
+    // dev.push(developer)
 })
