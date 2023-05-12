@@ -78,20 +78,22 @@ form.addEventListener("click", function(ev){
 
     let nameLanguage = document.querySelectorAll("input[class='language']")
     
+    let language = ''
     nameLanguage.forEach(function(name){
-        nameLanguage += name.value  
+        language += name.value  
     })
 
+    let exp = ''
     let experience = document.querySelectorAll("input[type='radio']:checked")
         
     experience.forEach(function(time){
-        experience += time.value
+        exp += time.value
     })
 
     let developer = {}
     developer.name = developerName
-    developer.linguagem = nameLanguage
-    developer.esperiencia = experience
+    developer.linguagem = language
+    developer.esperiencia = exp
 
 
     console.log({developer})
