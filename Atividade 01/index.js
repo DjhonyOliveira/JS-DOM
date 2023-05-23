@@ -102,7 +102,8 @@ function players() {
             '<div class="positionPlayer"><p>Posição Jogador: ' + playersRostered[i].posicao + '</p></div>' +
             '<div class="numberPlayer"><p>N° Camisa: ' + playersRostered[i].numeroCamisa + '</p></div>'
         )
+        
+        jogadores.innerHTML = players
     }
 
-    jogadores.innerHTML = players
 }

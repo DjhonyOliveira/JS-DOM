@@ -57,6 +57,7 @@ form{
     flex-direction: column;
 }
 
+
 .name-player{
     display: flex;
     align-items: center;
@@ -78,7 +79,7 @@ input[type="radio"]{
 
 #player-one, #player-two {
     background-color: transparent;
-    color: #fff;
+    color: #000000;
     padding: 0 10%;
     margin-top: 2px;
     border-radius: 7px;
@@ -102,45 +103,43 @@ button:hover{
 
 .table{
     display: grid;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     color: #fff;
-    /* background-color: rgb(146, 141, 141, 0.5); */
     margin: 5em auto 5em auto;
     width: 30em;
     height: 30em;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.campo-selecao{
+span {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
-    color: #fff;
-    border: none;
+    font-size: 10em!important;
+    width: auto;
+    height: 160px;
+    margin: 0;
+    padding: 0;
 }
 
 #quadro1, #quadro4, #quadro7{
     border-right: 5px solid #fff;
     border-bottom: 5px solid #fff;
-    font-size:xx-large;
-    padding: 20% 0 20% 0;
+    /* font-size:xx-large; */
     text-align: center;
 }
 
 #quadro2, #quadro5, #quadro8{
     border-right: 5px solid #fff;
     border-bottom: 5px solid #fff;
-    font-size:xx-large;
-    padding: 20% 0 20% 0;
+    /* font-size:xx-large; */
     text-align: center;
 }
 
 #quadro3, #quadro6, #quadro9{
     border-bottom: 5px solid #fff;
-    font-size:xx-large;
-    padding: 20% 0 20% 0;
+    /* font-size:xx-large; */
     text-align: center;
 }
 
