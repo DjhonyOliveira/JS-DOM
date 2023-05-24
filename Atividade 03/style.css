@@ -36,18 +36,19 @@ form{
     align-items: center;
 }
 
+
 .players{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 15px;
-    background-color: rgba(235, 236, 234, 0.952);
+    background-color: rgba(0,0,0,0.5);
     width: 20em;
     padding: 15px;
     margin: 1em auto 0 auto;
     border-radius: 30px;
-    box-shadow: 2px 2px 2px 1px #a09d9d;
+    box-shadow: 2px 2px 2px 1px #030303;
 }
 
 .player1, .player2{
@@ -71,15 +72,17 @@ form{
     gap: 10px;
 }
 
-input[type="radio"]{
-    width: 1.3em;
-    height: 1.3em;
-    
+label{
+    color: #fff;
+}
+
+::placeholder, h4{
+    color: #fff;
 }
 
 #player-one, #player-two {
     background-color: transparent;
-    color: #000000;
+    color: #ffff;
     padding: 0 10%;
     margin-top: 2px;
     border-radius: 7px;
@@ -103,7 +106,6 @@ button:hover{
 
 .table{
     display: grid;
-    /* align-items: center; */
     justify-content: center;
     color: #fff;
     margin: 5em auto 5em auto;
@@ -126,27 +128,20 @@ span {
 #quadro1, #quadro4, #quadro7{
     border-right: 5px solid #fff;
     border-bottom: 5px solid #fff;
-    /* font-size:xx-large; */
     text-align: center;
 }
 
 #quadro2, #quadro5, #quadro8{
     border-right: 5px solid #fff;
     border-bottom: 5px solid #fff;
-    /* font-size:xx-large; */
     text-align: center;
 }
 
 #quadro3, #quadro6, #quadro9{
     border-bottom: 5px solid #fff;
-    /* font-size:xx-large; */
     text-align: center;
 }
 
 #quadro7, #quadro8, #quadro9{
     border-bottom: none!important;
-}
-
-.campo-selecao:focus{
-    outline: 0;
 }
