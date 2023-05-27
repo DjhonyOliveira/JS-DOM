@@ -1,8 +1,6 @@
 const init = document.querySelector('#init')
 const span = document.querySelectorAll('span')
 const nextPlayer = document.querySelector('.next-player')
-
-
 let playersGame = []
 
 init.addEventListener('click', function(ev){
@@ -25,11 +23,12 @@ init.addEventListener('click', function(ev){
         } else {
             nextPlayer.value = playersGame[1].playerTwo
         }
+    } else {
+        alert('Faltam jogadores a serem cadastrados!!!')
     }
 });
 
 span.forEach(function(quadro){
-
     quadro.addEventListener('click', function(){
 
         if (playersGame.length < 2){
