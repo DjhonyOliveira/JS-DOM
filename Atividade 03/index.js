@@ -4,32 +4,9 @@ const span = document.querySelectorAll('span')
 const nextPlayer = document.querySelector('.next-player')
 let playersGame = []
 
-
+// Reboot game
 reboot.addEventListener('click', function(ev){
-    ev.preventDefault()
-
-    playersGame.length = 0
-    nextPlayer.value = ''
-
-    
-    const quadro1 = document.querySelector("#quadro1").value = ''
-    const quadro2 = document.querySelector("#quadro2").value = ''
-    const quadro3 = document.querySelector("#quadro3").value = ''
-    const quadro4 = document.querySelector("#quadro4").value = ''
-    const quadro5 = document.querySelector("#quadro5").value = ''
-    const quadro6 = document.querySelector("#quadro6").value = ''
-    const quadro7 = document.querySelector("#quadro7").value = ''
-    const quadro8 = document.querySelector("#quadro8").value = ''
-    const quadro9 = document.querySelector("#quadro9").value = ''
-    
-
-    // Limpar player One
-    const playerOne = document.getElementById('player-one').value = ''
-    const peao1 = document.querySelector('.player1 .peao-player .peao:checked').checked = 0
-
-    // Limpar player Two
-    const playerTwo = document.getElementById('player-two').value = ''
-    const peao2 = document.querySelector('.player2 .peao-player .peao:checked').checked = 0
+    location.reload()
 })
 
 // formulário
