@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Velha</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./console.png" type="image/x-icon">
     <script src="./index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    -<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Playfair:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
      <header>
@@ -41,10 +45,11 @@
                     </div>
                 </div>
                 <button type="submit" id="init">Iniciar partida</button>
+                <button id="reboot">Reiniciar</button>
             </div>
             <div class="game">
                 <label for="next-player">Proximo a jogar:</label>
-                <input type="text" class="next-player" id="next-player" value="Inicio" disabled>
+                <input type="text" class="next-player" id="next-player" value="" disabled>
             </div>
         </form>
         <div class="table">
