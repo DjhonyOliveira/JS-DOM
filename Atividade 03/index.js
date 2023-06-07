@@ -5,8 +5,32 @@ const nextPlayer = document.querySelector('.next-player')
 let playersGame = []
 
 // Reboot game
-reboot.addEventListener('click', function(){
-    location.reload()
+reboot.addEventListener('click', function(ev){
+    ev.preventDefault()
+
+    const quadro1 = document.querySelector("#quadro1").innerText = ''
+    const quadro2 = document.querySelector("#quadro2").innerText = ''
+    const quadro3 = document.querySelector("#quadro3").innerText = ''
+    const quadro4 = document.querySelector("#quadro4").innerText = ''
+    const quadro5 = document.querySelector("#quadro5").innerText = ''
+    const quadro6 = document.querySelector("#quadro6").innerText = ''
+    const quadro7 = document.querySelector("#quadro7").innerText = ''
+    const quadro8 = document.querySelector("#quadro8").innerText = ''
+    const quadro9 = document.querySelector("#quadro9").innerText = ''
+
+    quadro1.value = ''
+    quadro2.value = ''
+    quadro3.value = ''
+    quadro4.value = ''
+    quadro5.value = ''
+    quadro6.value = ''
+    quadro7.value = ''
+    quadro8.value = ''
+    quadro9.value = ''
+
+    playersGame.length = 0
+
+
 })
 
 // formulário
@@ -48,12 +72,12 @@ span.forEach(function(quadro){
         // Sequencia de Jogadores
         if (nextPlayer.value === playersGame[0].playerOne){
             quadro.innerText = playersGame[0].peao1
-            quadro.value = playersGame[0].peao1
+            // quadro.value = playersGame[0].peao1
             quadro.style.color = '#ff0000'
             nextPlayer.value = playersGame[1].playerTwo
         } else {
             quadro.innerText = playersGame[1].peao2
-            quadro.value = playersGame[1].peao2
+            // quadro.value = playersGame[1].peao2
             quadro.style.color = '#0000ff'
             nextPlayer.value = playersGame[0].playerOne
         }
