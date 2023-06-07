@@ -5,7 +5,7 @@ const nextPlayer = document.querySelector('.next-player')
 let playersGame = []
 
 // Reboot game
-reboot.addEventListener('click', function(ev){
+reboot.addEventListener('click', function(){
     location.reload()
 })
 
@@ -61,8 +61,8 @@ span.forEach(function(quadro){
 });
 
 // Validação do vencedor
-span.forEach(function(vitory){
-    vitory.addEventListener('click', function(){
+span.forEach(function(victory){
+    victory.addEventListener('click', function(){
         const quadro1 = document.querySelector("#quadro1")
         const quadro2 = document.querySelector("#quadro2")
         const quadro3 = document.querySelector("#quadro3")
@@ -73,7 +73,8 @@ span.forEach(function(vitory){
         const quadro8 = document.querySelector("#quadro8")
         const quadro9 = document.querySelector("#quadro9")
 
-        setTimeout(function(){
+        // timeOut para atraso no preenchimento dos campos vencedores
+        setTimeout(()=> {
             if (quadro1.value == 'X' && quadro2.value == 'X' && quadro3.value == 'X' || quadro1.value == 'O' && quadro2.value == 'O' && quadro3.value == 'O') {
                 quadro1.style.color = '#4ab337'
                 quadro2.style.color = '#4ab337'
