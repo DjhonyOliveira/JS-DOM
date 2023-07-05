@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url(./nova.jpg);
+    background-image: url(./resources/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -142,7 +142,8 @@ button:hover{
     display: grid;
     justify-content: center;
     color: #fff;
-    margin: 5em auto 5em auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
     width: 30em;
     height: 30em;
     grid-template-columns: 1fr 1fr 1fr;
@@ -179,4 +180,30 @@ span {
 
 #quadro7, #quadro8, #quadro9{
     border-bottom: none!important;
+}
+
+/* Ajustes Mobile0 */
+@media (max-width: 420px){
+    .table{
+        display: grid;
+        justify-content: center;
+        color: #fff;
+        margin-top: 5em;
+        margin-bottom: 5em;
+        width: 18em;
+        height: 18em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em!important;
+        font-family: 'Libre Baskerville', serif;
+        width: auto;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+    }
 }
